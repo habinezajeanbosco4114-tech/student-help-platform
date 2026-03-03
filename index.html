@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ViralVault 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOADER ================= -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- ================= LOGIN PAGE ================= -->
+<div class="login-page" id="loginPage">
+    <div class="login-card">
+        <h1>ViralVault</h1>
+
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginError" style="color:red; margin-top:10px;"></p>
+    </div>
+</div>
+
+<!-- ================= MAIN APP ================= -->
+<div class="app" id="app">
+
+    <header>
+        <h2>ViralVault 2.0</h2>
+        <div class="header-actions">
+            <button onclick="toggleDarkMode()">🌙</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <h3>Welcome <span id="username"></span> 👋</h3>
+        <p>
+            This is your ultra professional modern dashboard.
+        </p>
+
+        <section style="margin-top:40px;">
+            <h4>Features Included:</h4>
+            <ul style="margin-top:10px; line-height:1.8;">
+                <li>✔ Dark Mode (Saved)</li>
+                <li>✔ LocalStorage Login</li>
+                <li>✔ Loading Animation</li>
+                <li>✔ Smooth Scroll</li>
+                <li>✔ Mobile Responsive</li>
+            </ul>
+        </section>
+    </main>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
