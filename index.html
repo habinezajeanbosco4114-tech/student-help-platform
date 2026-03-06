@@ -1,69 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ViralVault 2.0</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediaVault Downloader</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<!-- ================= LOADER ================= -->
-<div id="loader">
-    <div class="spinner"></div>
-</div>
+<header>
 
-<!-- ================= LOGIN PAGE ================= -->
-<div class="login-page" id="loginPage">
-    <div class="login-card">
-        <h1>ViralVault</h1>
+<nav class="nav">
 
-        <input type="email" id="email" placeholder="Enter Email" required>
-        <input type="password" id="password" placeholder="Enter Password" required>
+<h2 class="logo">MediaVault</h2>
 
-        <button onclick="login()">Login</button>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#downloader">Downloader</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
 
-        <p id="loginError" style="color:red; margin-top:10px;"></p>
-    </div>
-</div>
+</nav>
 
-<!-- ================= MAIN APP ================= -->
-<div class="app" id="app">
+<div class="hero" id="home">
 
-    <header>
-        <h2>ViralVault 2.0</h2>
-        <div class="header-actions">
-            <button onclick="toggleDarkMode()">🌙</button>
-            <button onclick="logout()">Logout</button>
-        </div>
-    </header>
+<h1>Download Social Media Videos Easily</h1>
 
-    <main>
-        <h3>Welcome <span id="username"></span> 👋</h3>
-        <p>
-            This is your ultra professional modern dashboard.
-        </p>
+<p>Download videos from Instagram and YouTube instantly.</p>
 
-        <section style="margin-top:40px;">
-            <h4>Features Included:</h4>
-            <ul style="margin-top:10px; line-height:1.8;">
-                <li>✔ Dark Mode (Saved)</li>
-                <li>✔ LocalStorage Login</li>
-                <li>✔ Loading Animation</li>
-                <li>✔ Smooth Scroll</li>
-                <li>✔ Mobile Responsive</li>
-            </ul>
-        </section>
-    </main>
+<a href="#downloader" class="btn">Start Downloading</a>
 
 </div>
 
-<!-- ================= JAVASCRIPT ================= -->
+</header>
+
+<section id="downloader" class="downloader">
+
+<h2>Video Downloader</h2>
+
+<input type="text" id="videoUrl" placeholder="Paste video link here">
+
+<button onclick="downloadVideo()">Download</button>
+
+<p id="message"></p>
+
+</section>
+
+<section id="features" class="features">
+
+<h2>Why Use MediaVault</h2>
+
+<div class="feature-grid">
+
+<div class="card">
+<h3>Fast</h3>
+<p>Download videos instantly with optimized speed.</p>
+</div>
+
+<div class="card">
+<h3>Secure</h3>
+<p>Your downloads are safe and private.</p>
+</div>
+
+<div class="card">
+<h3>Free</h3>
+<p>Unlimited downloads without subscription.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="faq" class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+
+<h4>Is it free?</h4>
+
+<p>Yes, MediaVault downloader is completely free.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h4>Do I need an account?</h4>
+
+<p>No account required. Just paste the link and download.</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 MediaVault Downloader</p>
+
+</footer>
+
 <script src="script.js"></script>
 
 </body>
