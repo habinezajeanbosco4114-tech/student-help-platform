@@ -1,108 +1,177 @@
 body{
+
 font-family:Poppins;
+
 margin:0;
+
 background:#f5f7fb;
-color:#333;
+
 }
 
 header{
+
 background:linear-gradient(120deg,#3a7bfd,#00c6ff);
+
 color:white;
+
 padding-bottom:80px;
+
 }
 
 .nav{
+
 display:flex;
+
 justify-content:space-between;
+
 padding:20px 10%;
+
 align-items:center;
+
 }
 
 .nav ul{
+
 display:flex;
+
 list-style:none;
+
 }
 
 .nav ul li{
+
 margin-left:20px;
+
 }
 
 .nav ul li a{
+
 color:white;
+
 text-decoration:none;
-font-weight:500;
+
 }
 
 .hero{
+
 text-align:center;
+
 padding:100px 20px;
+
 }
 
 .hero h1{
+
 font-size:42px;
+
 }
 
 .btn{
+
 background:white;
+
 color:#3a7bfd;
+
 padding:12px 30px;
+
 border-radius:30px;
+
 text-decoration:none;
-font-weight:600;
+
 }
 
 .downloader{
+
 text-align:center;
+
 padding:80px 20px;
+
 background:white;
+
 }
 
 .downloader input{
+
 width:60%;
+
 max-width:500px;
+
 padding:14px;
+
 border:1px solid #ccc;
+
 border-radius:6px;
+
 }
 
 .downloader button{
+
 padding:14px 25px;
+
 margin-left:10px;
+
 background:#3a7bfd;
+
 border:none;
+
 color:white;
+
 border-radius:6px;
+
 cursor:pointer;
+
 }
 
 .features{
+
 padding:80px 20px;
+
 text-align:center;
+
 }
 
 .feature-grid{
+
 display:flex;
+
 justify-content:center;
+
 gap:30px;
+
 flex-wrap:wrap;
+
 }
 
 .card{
+
 background:white;
+
 padding:30px;
+
 border-radius:10px;
+
 width:250px;
+
 box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
 }
 
 .faq{
+
 padding:60px 20px;
+
 background:#fafafa;
+
 }
 
 footer{
+
 text-align:center;
+
 padding:30px;
+
 background:#111;
+
 color:white;
+
 }
