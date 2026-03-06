@@ -1,60 +1,25 @@
-// Hide Loader
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
-    }, 1000);
-});
+function downloadVideo(){
 
-// Users (Demo)
-const users = {
-    "admin@viralvault.com": {
-        password: "1234",
-        name: "Habineza"
-    }
-};
+let url = document.getElementById("videoUrl").value;
 
-// Auto login if saved
-document.addEventListener("DOMContentLoaded", () => {
+let message = document.getElementById("message");
 
-    if(localStorage.getItem("darkMode") === "enabled"){
-        document.body.classList.add("dark");
-    }
-
-    const savedUser = localStorage.getItem("user");
-    if(savedUser){
-        openApp(savedUser);
-    }
-});
-
-function login(){
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if(users[email] && users[email].password === password){
-        localStorage.setItem("user", users[email].name);
-        openApp(users[email].name);
-    }else{
-        document.getElementById("loginError").textContent = "Invalid Email or Password";
-    }
+if(url === ""){
+message.innerText="Please paste a video link.";
+return;
 }
 
-function openApp(name){
-    document.getElementById("loginPage").style.display = "none";
-    document.getElementById("app").style.display = "block";
-    document.getElementById("username").textContent = name;
+if(url.includes("youtube.com") || url.includes("youtu.be")){
+message.innerText="Processing YouTube link...";
+window.open("https://y2mate.is/en/youtube-downloader/?url="+url);
+return;
 }
 
-function logout(){
-    localStorage.removeItem("user");
-    location.reload();
+if(url.includes("instagram.com")){
+message.innerText="Processing Instagram link...";
+window.open("https://igram.world/?url="+url);
+return;
 }
 
-function toggleDarkMode(){
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        localStorage.setItem("darkMode","enabled");
-    }else{
-        localStorage.removeItem("darkMode");
-    }
+message.innerText="Unsupported link. Use YouTube or Instagram.";
 }
